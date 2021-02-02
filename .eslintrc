@@ -1,0 +1,31 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "jsx": true,
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "react",
+    "react-hooks",
+    "jest"
+  ],
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest": true,
+    "browser": true
+  },
+  "rules": {
+    "eqeqeq": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/no-render-return-value": "off"
+  }
+}
