@@ -1,5 +1,4 @@
 import { shallow } from 'enzyme';
-import { LocalDate } from '@js-joda/core';
 
 import { buildStudentAssignment } from './test-utils';
 import StudentAssignmentsTable from '../pages/components/StudentAssignmentsTable';
