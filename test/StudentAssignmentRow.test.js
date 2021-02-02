@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import { LocalDate } from '@js-joda/core';
 
 import StudentAssignmentRow from '../pages/components/StudentAssignmentRow';
-import { buildStudentAssignment } from './test-utils';
+import { buildStudentAssignment } from './test-helpers';
 
 describe('StudentAssignmentsTable', () => {
   const today = LocalDate.now();

@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 
-import { buildStudentAssignment } from './test-utils';
+import { buildStudentAssignment } from './test-helpers';
 import StudentAssignmentsTable from '../pages/components/StudentAssignmentsTable';
 import StudentAssignmentRow from '../pages/components/StudentAssignmentRow';
 

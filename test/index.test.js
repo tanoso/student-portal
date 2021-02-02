@@ -20,7 +20,6 @@ describe('Home', () => {
 
   it('renders error message on error prop set to true', () => {
     const wrapper = shallow(<Home error={true} />);
-    console.log(wrapper.text());
     expect(wrapper.find('p#errorMessage').length).toBe(1);
     expect(wrapper.find('p#errorMessage').text()).toBe(
       'An unexpected error occurred. Please try again later.'
@@ -53,10 +52,7 @@ describe('getServerSideProps', () => {
     window.fetch = jest.fn(() =>
       Promise.resolve({
         status: 200,
-        json: () =>
-          Promise.resolve({
-            studentAssignments: {},
-          }),
+        json: () => Promise.resolve([]),
       })
     );
 
@@ -64,7 +60,7 @@ describe('getServerSideProps', () => {
     expect(response).toEqual(
       expect.objectContaining({
         props: {
-          studentAssignments: {},
+          studentAssignments: [],
         },
       })
     );

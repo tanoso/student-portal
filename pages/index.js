@@ -22,11 +22,11 @@ Home.propTypes = {
 
 export async function getServerSideProps() {
   return fetch(
-    'http://localhost:3000/api/student-assignments/75694983b2b44a709e6f946f4'
+    'http://localhost:3000/api/student-assignments/f8fa0b09cb1847bc8f3a6c2450b2c05c'
   )
     .then(async (res) => {
       if (res.status !== 200) return { props: { error: true } };
-      return { props: await res.json() };
+      return { props: { studentAssignments: await res.json() } };
     })
     .catch(() => {
       return { props: { error: true } };
