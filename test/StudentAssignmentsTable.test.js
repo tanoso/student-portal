@@ -1,32 +1,14 @@
 import { shallow } from 'enzyme';
 import { LocalDate } from '@js-joda/core';
 
+import { buildStudentAssignment } from './test-utils';
 import StudentAssignmentsTable from '../pages/components/StudentAssignmentsTable';
 import StudentAssignmentRow from '../pages/components/StudentAssignmentRow';
 
 describe('StudentAssignmentsTable', () => {
-  const today = LocalDate.now();
   const studentAssignments = [
-    {
-      id: 1,
-      submitted: true,
-      grade: 85,
-      assignment: {
-        id: 1,
-        title: 'Arrays',
-        dueDate: today.minusWeeks(1).toString(),
-      },
-    },
-    {
-      id: 2,
-      submitted: true,
-      grade: 79,
-      assignment: {
-        id: 2,
-        title: 'Linked Lists',
-        dueDate: today.minusDays(30).toString(),
-      },
-    },
+    buildStudentAssignment({}),
+    buildStudentAssignment({}),
   ];
 
   it('shows message if there is no assignment information', () => {
